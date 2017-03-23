@@ -1,0 +1,13 @@
+c:\users\nnbbbbbbbnn\documents\visual studio 2015\Projects\ARCHIMED\ARCHIMED\bin\Debug\ARCHIMED.exe.config
+c:\users\nnbbbbbbbnn\documents\visual studio 2015\Projects\ARCHIMED\ARCHIMED\obj\Debug\ARCHIMED.csprojResolveAssemblyReference.cache
+c:\users\nnbbbbbbbnn\documents\visual studio 2015\Projects\ARCHIMED\ARCHIMED\obj\Debug\ARCHIMED.Form1.resources
+c:\users\nnbbbbbbbnn\documents\visual studio 2015\Projects\ARCHIMED\ARCHIMED\obj\Debug\ARCHIMED.Properties.Resources.resources
+c:\users\nnbbbbbbbnn\documents\visual studio 2015\Projects\ARCHIMED\ARCHIMED\obj\Debug\ARCHIMED.csproj.GenerateResource.Cache
+c:\users\nnbbbbbbbnn\documents\visual studio 2015\Projects\ARCHIMED\ARCHIMED\bin\Debug\ARCHIMED.exe
+c:\users\nnbbbbbbbnn\documents\visual studio 2015\Projects\ARCHIMED\ARCHIMED\bin\Debug\ARCHIMED.pdb
+c:\users\nnbbbbbbbnn\documents\visual studio 2015\Projects\ARCHIMED\ARCHIMED\obj\Debug\ARCHIMED.exe
+c:\users\nnbbbbbbbnn\documents\visual studio 2015\Projects\ARCHIMED\ARCHIMED\obj\Debug\ARCHIMED.pdb
+C:\Users\nnbbbbbbbnn\Documents\Visual Studio 2015\Projects\ARCHIMED\ARCHIMED\bin\Debug\System.Data.SqlServerCe.dll
+C:\Users\nnbbbbbbbnn\Documents\Visual Studio 2015\Projects\ARCHIMED\ARCHIMED\bin\Debug\FR\System.Data.SqlServerCe.resources.dll
+C:\Users\nnbbbbbbbnn\Documents\Visual Studio 2015\Projects\ARCHIMED\ARCHIMED\bin\Debug\LibUsbDotNet.dll
+C:\Users\nnbbbbbbbnn\Documents\Visual Studio 2015\Projects\ARCHIMED\ARCHIMED\bin\Debug\LibUsbDotNet.xml
