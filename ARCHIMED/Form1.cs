@@ -309,10 +309,7 @@ namespace ARCHIMED
                     MessageBox.Show("les informations ont bien été enregistrées !");
                     groupSynth.Visible = true;
                     infos();
-                    disconnect_db();
-                    
-
-
+                    disconnect_db();                    
                 }
                
                 //SqlCeCommand com = new SqlCeCommand("INSERT INTO patient (id, matricule, nom, prenom, nomMarital, dateNaissance, telephone, telephoneUrgence, mail, domicile, ville, pays, antecedentPatient_id) VALUES (NULL, NULL, " + txt_nom.Text + "," + txt_prenom.Text + ",NULL," + dat_naiss.Value + "," + txt_num1.Text + "," + txt_num2.Text + "," + txt_mail.Text + "," + txt_dom.Text + "," + comboBox1.SelectedValue + "," + comboBox1.SelectedValue + "NULL);", conn);
@@ -320,8 +317,7 @@ namespace ARCHIMED
             catch(Exception ex)
             {
                 MessageBox.Show("ERREUR : "+ex);
-            }
-            
+            }            
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -348,7 +344,7 @@ namespace ARCHIMED
             }
         }
 
-        private void connect_db()
+        void connect_db()
         {
             // connect to db
             conn = new SqlCeConnection("Data Source=" + DBPath);
@@ -362,7 +358,7 @@ namespace ARCHIMED
                 MessageBox.Show("base de donée non connecté ");
             }
         }
-        private void disconnect_db()
+        void disconnect_db()
         {
             conn = new SqlCeConnection("Data Source=" + DBPath);
             try
@@ -375,7 +371,7 @@ namespace ARCHIMED
                 MessageBox.Show("base de donée toujours connecté ");
             }
         }
-        private void create_table()
+        void create_table()
         {
             // create table "Table 1" if not exists
             try
@@ -496,7 +492,7 @@ namespace ARCHIMED
            
         }
 
-        private string mat_generator()
+        string mat_generator()
         {
             string mat = "AR";
             using (SqlCeConnection conn = new SqlCeConnection("Data Source=" + DBPath))
@@ -515,18 +511,21 @@ namespace ARCHIMED
                 {
                     MessageBox.Show(ex.Message);
                 }
-                mat += DateTime.Today.ToShortDateString();
-                mat += DateTime.Today.Minute;
-                mat += DateTime.Today.Hour;
+                //mat += DateTime.Today.ToShortDateString();
+                mat += DateTime.Now.Minute;
+                mat += DateTime.Now.Hour;
+                mat += DateTime.Now.Day;
+                mat += DateTime.Now.Month;
                 mat += txt_nom.Text[0];
                 mat += txt_prenom.Text[0];
+                mat += DateTime.Now.Year;
 
                 return mat;
             }
 
         }
 
-        private void infos()
+        void infos()
         {
             string queryString = "SELECT * FROM patient ORDER BY id DESC";
             SqlCeCommand command = new SqlCeCommand(queryString, conn);
@@ -549,7 +548,7 @@ namespace ARCHIMED
             }
            
         }
-        static void copie_db()
+        void copie_db()
         {
 
             string fileName = "bd_archimede.sdf";
@@ -564,12 +563,12 @@ namespace ARCHIMED
             System.IO.File.Copy(sourceFile, destFile, true);
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        void pictureBox2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        void button1_Click_1(object sender, EventArgs e)
         {
             disconnect_db();
             copie_db();
